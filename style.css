@@ -1,13 +1,18 @@
 body {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
 }
 
 header {
-    text-align: center;
-    background-color: #a7beb9;
-    color: white;
+    padding: 0 1.6rem 0 1rem;
+    background-color: #96c7bc;
+    color: rgb(34, 34, 34);
     padding-bottom: 1px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -17,19 +22,64 @@ header h1 {
     padding-top: 10px;
 }
 
+.header-links {
+    padding-top: 1.6rem;
+}
+
+button {
+    border-radius: 7px;
+    width: 7rem;
+    height: 3rem;
+    font-size: 20px;
+    background-color: #e7e8d1;
+    border: solid 1px black
+}
+
+button:hover {
+    background-color: #e3e4d5;
+    border: solid 2px rgb(43, 43, 43);
+    box-shadow: 1px 1px rgb(177, 176, 159);
+}
+
 main {
     display: flex;
+    flex: 1;
 }
 
 .project-menu {
     flex: 1;
     background-color: #b85042;
+    color: white;
+}
+
+.project-item {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.project-item:hover {
+    color: #c5c5c5;
+}
+
+.project-item.active {
+    color: #96c7bc;
+    font-weight: bold;
 }
 
 .project-content {
     flex: 4;
     background-color: #e7e8d1;
     padding: 0 2rem 0 2rem;
+}
+
+.project-menu strong {
+    font-size: 1.3rem;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.project-menu h2 {
+    font-size: 1.8rem;
 }
 
 .content-header {
@@ -39,9 +89,12 @@ main {
     padding: 0 2rem 0 2rem;
 }
 
+.content-title {
+    font-size: 2rem;
+}
+
 .content-language-title, 
 .content-language,
-.content-content-techno-title,
 .content-techno {
     margin: -0.5rem 0 -0.5rem 0;
 }
@@ -59,4 +112,103 @@ main {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
+}
+
+.content-carrousel {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.content-carrousel > button.prev,
+.content-carrousel > button.next {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e7e8d1;
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+}
+
+.content-carrousel > button.prev:hover,
+.content-carrousel > button.next:hover {
+    background-color: #96c7bc;
+    border: solid 2px rgb(43, 43, 43);
+    box-shadow: 1px 1px rgb(177, 176, 159);
+    transform: scale(1.08);
+}
+
+.content-carrousel > button.prev:active,
+.content-carrousel > button.next:active {
+    transform: scale(0.95);
+}
+
+.content-image {
+    width: 650px;
+    max-width: 70%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carrousel-indicators {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.carrousel-indicators button.carrousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c5c5c5;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carrousel-indicators button.carrousel-dot:hover {
+    background-color: #96c7bc;
+    transform: scale(1.2);
+}
+
+.carrousel-indicators button.carrousel-dot.active {
+    background-color: #b85042;
+    border-color: #b85042;
+    transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+    .content-carrousel {
+        gap: 0.5rem;
+    }
+
+    .content-carrousel > button.prev,
+    .content-carrousel > button.next {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 0.9rem;
+    }
+
+    .content-image {
+        max-width: calc(100% - 6rem);
+    }
 }

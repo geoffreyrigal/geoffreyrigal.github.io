@@ -1,0 +1,9 @@
+body {
+    height: 100vh;
+}
+
+embed {
+    flex: 1;
+    width: 100%;
+    border: none;
+}

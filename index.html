@@ -9,19 +9,29 @@
 
     <body>
         <header>
-            <h1>Rigal Geoffrey</h1>
-            <h2>Etudiant en Informatique</h2>
+            <div class="header-name">
+                <h1>Rigal Geoffrey</h1>
+                <h2>Etudiant en Informatique</h2>
+            </div>
+
+            <div class="header-links">
+                <a href="page/cv.html"><button>CV</button></a>
+                <a href="index.html"><button>Projets</button></a>
+                <a href="page/cv.html"><button>Bouton3</button></a>
+                <a href="page/cv.html"><button>Bouton4</button></a>
+            </div>
+            
         </header>
 
         <main>
             <div class="project-menu">
-                <h3 style="text-align: center;">Menu</h3>
+                <h2 style="text-align: center;">Menu</h2>
                 <ul></ul>
             </div>
 
             <div class="project-content">
                 <div class="content-header">
-                    <h1 class="content-title">Veuillez choisir un projet dans le menu à gauche</h1>
+                    <p class="content-title">Veuillez choisir un projet dans le menu à gauche</p>
                     <h4 class="content-date"></h4>
                 </div>
                 
@@ -42,7 +52,11 @@
                 <p class="content-description"></p>
                 <br>
 
-                <img class="content-image" src="" alt="">
+                <div class="content-carrousel">
+                    <button class="prev"><<</button>
+                    <img class="content-image" src="" alt="">
+                    <button class="next">>></button>
+                </div>
             </div>
         </main>
         

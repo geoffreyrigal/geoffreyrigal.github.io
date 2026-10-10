@@ -1,6 +1,6 @@
 [
     {
-        "category": "perso",
+        "category": "Perso",
         "title_menu": "PitWallLMU",
         "title": "Projet Personnel - PitWallLMU",
         "date": "Juillet 2025 - Actuellement",
@@ -8,11 +8,11 @@
         "techno": ["Shared Memory Reader", "gRPC", "Protobuf", "Tonic", "QT Application"],
         "usage": "Description de l'usage du projet",
         "description": "Description du projet",
-        "link_img": "img/pitwall.png",
+        "link_img": ["img/pitwall_1.png","img/pitwall_2.png","img/pitwall_3.png"],
         "alt_img": "Image de Le Mans Ultimate"
     },
     {
-        "category": "scolaire",
+        "category": "Scolaire",
         "title_menu": "Sutom",
         "title": "Projet Scolaire - SAE Sutom",
         "date": "Septembre 2025 - Janvier 2026",
@@ -20,7 +20,19 @@
         "techno": ["Lecture de fichiers", "Github"],
         "usage": "Description de l'usage du projet Sutom",
         "description": "Description du projet Sutom",
-        "link_img": "img/motus.png",
+        "link_img": ["img/motus.png", "img/motus2.png"],
+        "alt_img": "Image de l'émission motus"
+    },
+    {
+        "category": "Perso",
+        "title_menu": "Portefolio",
+        "title": "Projet Personnel - Portefolio",
+        "date": "Octobre 2026",
+        "languages": ["HTML/CSS, JavaScript"],
+        "techno": ["Github", "Hébergement site par Github"],
+        "usage": "Description de l'usage du projet Porteforlio",
+        "description": "Description du projet Porteforlio",
+        "link_img": ["/img/portefolio1.png"],
         "alt_img": "Image de l'émission motus"
     }
 ]
