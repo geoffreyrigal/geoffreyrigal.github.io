@@ -1,11 +1,26 @@
 [
     {
-        "index": 1,
+        "category": "perso",
+        "title_menu": "PitWallLMU",
         "title": "Projet Personnel - PitWallLMU",
+        "date": "Juillet 2025 - Actuellement",
         "languages": ["Python", "Rust", "HTML/CSS", "JavaScript"],
         "techno": ["Shared Memory Reader", "gRPC", "Protobuf", "Tonic", "QT Application"],
         "usage": "Description de l'usage du projet",
         "description": "Description du projet",
-        "link_img": "img/pitwall.png"
+        "link_img": "img/pitwall.png",
+        "alt_img": "Image de Le Mans Ultimate"
+    },
+    {
+        "category": "scolaire",
+        "title_menu": "Sutom",
+        "title": "Projet Scolaire - SAE Sutom",
+        "date": "Septembre 2025 - Janvier 2026",
+        "languages": ["Python"],
+        "techno": ["Lecture de fichiers", "Github"],
+        "usage": "Description de l'usage du projet Sutom",
+        "description": "Description du projet Sutom",
+        "link_img": "img/motus.png",
+        "alt_img": "Image de l'émission motus"
     }
 ]

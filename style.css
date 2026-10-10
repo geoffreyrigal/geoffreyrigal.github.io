@@ -31,3 +31,32 @@ main {
     background-color: #e7e8d1;
     padding: 0 2rem 0 2rem;
 }
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem 0 2rem;
+}
+
+.content-language-title, 
+.content-language,
+.content-content-techno-title,
+.content-techno {
+    margin: -0.5rem 0 -0.5rem 0;
+}
+
+.content-usage-title,
+.content-usage,
+.content-description-title,
+.content-description {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+
+
+.content-put-side-by-side {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
