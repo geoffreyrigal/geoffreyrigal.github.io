@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
+    background-color: #e7e8d1;
 }
 
 header {
@@ -23,22 +24,22 @@ header h1 {
 }
 
 .header-links {
-    padding-top: 1.6rem;
+    padding-top: 2rem;
 }
 
 button {
     border-radius: 7px;
     width: 7rem;
-    height: 3rem;
+    height: 2rem;
     font-size: 20px;
-    background-color: #e7e8d1;
-    border: solid 1px black
+    background-color: #c2948e;
+    border: solid 1px black;
+    box-shadow: 1px 3px rgb(114, 114, 114);
 }
 
 button:hover {
-    background-color: #e3e4d5;
-    border: solid 2px rgb(43, 43, 43);
-    box-shadow: 1px 1px rgb(177, 176, 159);
+    background-color: #be8b86;
+    box-shadow: 0.3px 1px rgb(114, 114, 114);
 }
 
 main {
@@ -78,8 +79,52 @@ main {
     margin: 0.5rem 0;
 }
 
-.project-menu h2 {
+.project-menu h2, .project-info h2 {
     font-size: 1.8rem;
+    text-align: center;
+}
+
+.project-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info {
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
+    padding: 1rem 1.2rem;
+    background-color: #b85042;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.contact-list a,
+.contact-list span {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: #96c7bc;
+    text-decoration: underline;
+}
+
+.contact-list img {
+    width: 1.3rem;
+    height: 1.3rem;
+    filter: invert(1);
 }
 
 .content-header {
@@ -125,9 +170,8 @@ main {
 
 .content-carrousel > button.prev,
 .content-carrousel > button.next {
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
@@ -146,19 +190,13 @@ main {
     background-color: #96c7bc;
     border: solid 2px rgb(43, 43, 43);
     box-shadow: 1px 1px rgb(177, 176, 159);
-    transform: scale(1.08);
-}
-
-.content-carrousel > button.prev:active,
-.content-carrousel > button.next:active {
-    transform: scale(0.95);
 }
 
 .content-image {
-    width: 650px;
+    width: 1080px;
     max-width: 70%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
     object-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

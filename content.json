@@ -8,7 +8,7 @@
         "techno": ["Shared Memory Reader", "gRPC", "Protobuf", "Tonic", "QT Application"],
         "usage": "Description de l'usage du projet",
         "description": "Description du projet",
-        "link_img": ["img/pitwall_1.png","img/pitwall_2.png","img/pitwall_3.png"],
+        "link_img": ["img/pitwall1.png","img/pitwall2.png","img/pitwall3.png"],
         "alt_img": "Image de Le Mans Ultimate"
     },
     {
