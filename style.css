@@ -45,9 +45,9 @@
     --text-content: #ffffff;
     --border: gray;
 
-    --menu-title: #f95b22;
+    --menu-title: #1c97d5;
     --menu-category: rgb(235, 195, 34);
-    --content-title: #f95b22;
+    --content-title: #1c97d5;
     --content-date: rgb(64, 176, 139);
     --content-label: rgb(225, 0, 191);
 
@@ -251,6 +251,7 @@ main {
 .content-description-title,
 .content-description {
     margin: 0.5rem 0;
+    white-space: pre-line;
 }
 
 .content-put-side-by-side {
