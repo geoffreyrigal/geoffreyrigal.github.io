@@ -118,6 +118,24 @@ async function inject_project(content, project) {
     updateCarrouselDisplay(content);
 }
 
+const root = document.documentElement;
+const imgTheme = document.querySelector(".theme-img");
+
+function applyTheme(theme) {
+    root.dataset.theme = theme;
+    imgTheme.src = theme === "dark" ? "img/sun.svg" : "img/moon.svg";
+}
+
+const saved = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(saved ?? (prefersDark ? "dark" : "light"));   // au chargement
+
+document.querySelector(".theme-toggle").addEventListener("click", () => {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+});
+
 async function main() {
     const projects = await charge_file();
     const content = document.querySelector(".project-content");
