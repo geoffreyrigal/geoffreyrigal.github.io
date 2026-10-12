@@ -104,7 +104,13 @@ async function inject_project(content, project) {
     content.querySelector(".content-usage").textContent = project.usage;
     content.querySelector(".content-description-title").textContent = "Description du projet";
     content.querySelector(".content-description").textContent = project.description;
-
+    console.log(project.repo);
+    if (project.repo !== "") {
+        content.querySelector(".content-repo-title").textContent = "Lien vers le dépot Github : ";
+        content.querySelector(".content-repo").href = project.repo;
+        content.querySelector(".content-repo").textContent = project.repo;
+    }
+    
     if (Array.isArray(project.link_img)) {
         currentImages = project.link_img;
     } else if (typeof project.link_img === "string" && project.link_img.trim() !== "") {

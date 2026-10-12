@@ -1,15 +1,16 @@
 [
     {
-        "category": "Perso",
+        "category": "Personnel",
         "title_menu": "PitWallLMU",
         "title": "Projet Personnel - PitWallLMU",
         "date": "Juillet 2025 - Actuellement",
         "languages": ["Python", "Rust", "HTML/CSS", "JavaScript"],
         "techno": ["Shared Memory Reader", "gRPC", "Protobuf", "Tonic", "QT Application"],
-        "usage": "Etant joueur de Le Mans Ultimate, j'était confronté à un problème. Je n'arrivais pas à regarder les informations sur l'écran (Température de pneux, temps restant, ...) pendant que je roulais donc je faisais des erreurs (Tête à queue, bloquage de roue, accident, ...).\n Deuxième problème, calculer les stratégie en roulant, c'est aussi source d'erreur.\n C'est pourquoi j'ai choisi de déléguer cette tache à mon/mes coequipiers. Le but du projet PitWallLMU, c'est de récolter les informations visibles ou non du joueur, de les traiter avec des calculs si besoin et de les envoyer aux coéquipiers à distance, que ce soit dans la même pièce ou à travers le monde.",
-        "description": "Le premier outil qui m'a été utile est un lecteur de mémoire partagé (Shared Memory Reader), pyRfactor2SharedMemory. Il est initialement concu pour le jeu rFactor2, qui est la base du jeu Le Mans Ultimate. Il y a donc quelques valeurs non récupérables ou erronées qu'on peut potentiellement récuperer par le calcul. Un fois les valeurs récupérées dans mon programme, j'effectue des calculs sur les valeurs récupérées si besoin puis je mets à disposition dans une api grace au module Flask accessible depuis l'adresse IP publique de l'ordinateur qui héberge. Il faut penser aussi à ouvrir le port désigné dans le programme python sur la box internet. Un ordinateur distant se connecte au site [adresse-ip-publique]:[port] et un script JavaScript récupère les données dans l'API. Seulement il y a un problème dans ma conception du projet. Mes données transitent via un protocole https, bien trop lourd et sécurisé pour le trafic ce qui est un facteur limitant de débit sur une connexion lente ce qui peut causer des retards dans les valeurs affichées voir planter. Il est donc prévu de recoder la partie de transmission en rust en implémentant une comminication par protocole UDP, protocole bien plus léger et rapide que https ce qui permettrai de corriger le problème.",
+        "usage": "Étant joueur de Le Mans Ultimate, j'étais confronté à un problème. Je n'arrivais pas à regarder les informations sur l'écran (température des pneus, temps restant, ...) pendant que je roulais, donc je faisais des erreurs (tête-à-queue, blocage de roue, accident, ...).\nDeuxième problème : calculer les stratégies en roulant, c'est aussi une source d'erreurs.\nC'est pourquoi j'ai choisi de déléguer cette tâche à mon/mes coéquipiers. Le but du projet PitWallLMU, c'est de récolter les informations visibles ou non du joueur, de les traiter avec des calculs si besoin et de les envoyer aux coéquipiers à distance, que ce soit dans la même pièce ou à travers le monde.",
+        "description": "Le premier outil qui m'a été utile est un lecteur de mémoire partagée (Shared Memory Reader), pyRfactor2SharedMemory. Il est initialement conçu pour le jeu rFactor2, qui est la base du jeu Le Mans Ultimate. Il y a donc quelques valeurs non récupérables ou erronées qu'on peut potentiellement récupérer par le calcul.\nUne fois les valeurs récupérées dans mon programme, j'effectue des calculs sur les valeurs sur celles-ci si besoin puis je les mets à disposition dans une API grâce au module Flask accessible depuis l'adresse IP publique de l'ordinateur qui héberge. Il faut penser aussi à ouvrir le port désigné dans le programme Python sur la box Internet.\nUn ordinateur distant se connecte au site [adresse-ip-publique]:[port] et un script JavaScript récupère les données dans l'API.\nSeulement il y a un problème dans ma conception du projet. Mes données transitent via un protocole HTTPS, bien trop lourd et sécurisé pour le trafic, ce qui est un facteur limitant de débit sur une connexion lente et peut causer des retards dans les valeurs affichées, voire planter. Il est donc prévu de recoder la partie transmission en Rust en implémentant une communication par protocole UDP, protocole bien plus léger et rapide que HTTPS, ce qui permettrait de corriger le problème.",
         "link_img": ["img/pitwall1.png","img/pitwall2.png","img/pitwall3.png"],
-        "alt_img": "Image de Le Mans Ultimate"
+        "alt_img": "Images du projet PitWallLMU",
+        "repo": "https://github.com/geoffreyrigal/Pitwall-LMU"
     },
     {
         "category": "Scolaire",
@@ -21,18 +22,33 @@
         "usage": "Description de l'usage du projet Sutom",
         "description": "Description du projet Sutom",
         "link_img": ["img/motus.png", "img/motus2.png"],
-        "alt_img": "Image de l'émission motus"
+        "alt_img": "Image de l'émission motus",
+        "repo": ""
     },
     {
-        "category": "Perso",
+        "category": "Personnel",
         "title_menu": "Portefolio",
         "title": "Projet Personnel - Portefolio",
         "date": "Octobre 2026",
-        "languages": ["HTML/CSS, JavaScript"],
+        "languages": ["HTML/CSS", "JavaScript"],
         "techno": ["Github", "Hébergement site par Github"],
-        "usage": "Description de l'usage du projet Porteforlio",
-        "description": "Description du projet Porteforlio",
-        "link_img": ["/img/portefolio1.png"],
-        "alt_img": "Image de l'émission motus"
+        "usage": "En préparant mon CV, j'ai jugé utile d'avoir un site où répertorier mes projets. C'est donc le site que vous êtes en train de consulter.",
+        "description": "Pour avoir un site qui réponde à nos attentes, il est utile de se l'imaginer en faisant un croquis (réalisé sur Paint).\nJ'ai ensuite fait la structure du site en HTML et je l'ai stylisé en CSS.\nDans un fichier JSON, j'ai référencé tous les champs à afficher pour chaque projet comme le titre du projet, les technologies et langages utilisés et une ou plusieurs photos.\nEnsuite, un script JavaScript écoute les éléments du menu de gauche pour savoir quel projet afficher. Ce projet a été l'occasion d'apprendre les bases du JavaScript, un langage que j'avais assez négligé jusqu'ici.\nCette structure de fichiers m'offre la possibilité d'ajouter un projet sans avoir à toucher à d'autres fichiers que le JSON, ce qui, d'une certaine manière, respecte l'Open/Closed Principle des principes SOLID.\nPour l'hébergement, il suffit de nommer son dépôt [pseudo_github].github.io et de veiller à ce qu'il pointe bien vers 'index.html'.",
+        "link_img": ["/img/portefolio1.png", "/img/portefolio2.png"],
+        "alt_img": "Schema représentant la maquette et structure du site",
+        "repo": "https://github.com/geoffreyrigal/geoffreyrigal.github.io"
+    },
+    {
+        "category": "Personnel",
+        "title_menu": "ButtonBox",
+        "title": "Projet Personnel - ButtonBox",
+        "date": "Octobre 2025 - Mai 2026",
+        "languages": ["C++"],
+        "techno": ["Fusion360", "Arduino Léonardo", "Elegoo Cura"],
+        "usage": "Désireux d'améliorer mon expérience en simracing, de me rapprocher le plus possible de la réalité et le réalisme passant par l'attention portée aux détails, j'ai voulu ajouter un élément : une boîte de commandes permettant de modifier les réglages de la voiture tout en roulant, comme on peut en trouver dans les voitures de compétition de catégorie GT3 ou encore Hypercar. Seulement, sur le marché, une bonne boîte coûte près de 150 €. J'ai décidé de la construire moi-même.",
+        "description": "J'ai commencé par établir une liste de ce dont j'aurais besoin. Cette liste établie, j'ai pu estimer le nombre de composants dont j'aurais besoin, à savoir 6 boutons-poussoirs, 5 interrupteurs à deux positions, 1 interrupteur ON/OFF/ON, 5 commutateurs rotatifs avec leurs capuchons et un gros bouton 'Engine Start' parce que ça fait joli.\nAprès avoir passé commande, j'ai comparé les cartes de commande (type Arduino ou ESP) et j'ai trouvé que la carte Arduino Leonardo était idéale car elle comportait beaucoup de bornes (pas assez, donc j'ai dû acheter aussi une extension MCP23017) et qu'elle pouvait être facilement reconnue comme étant un contrôleur (comme un joystick ou une manette) par l'ordinateur.\nEn attendant les composants, j'ai modélisé sur Fusion360 la boîte de manière à contenir tous les composants avec leurs dimensions précises et de pouvoir la visser dans les trous d'usine du châssis.\nPour l'impression, j'ai utilisé l'imprimante Neptune 3 Pro d'Elegoo et le logiciel Cura m'a permis de paramétrer l'impression pour trouver un bon compromis entre solidité de la pièce et consommation de filament.\nJ'ai par la suite pu souder tous mes composants pour les connecter à l'Arduino Leonardo et son extension de broches. La carte ne comportant que 2 broches GND (terre), j'ai dû faire une ligne de terre où je connectais chacun de mes composants (visible avec les connecteurs Wago orange sur les photos).\nUne fois tout connecté, j'ai pu coder le programme de l'Arduino et vérifier que tout fonctionnait bien. Le boîtier a parfaitement fonctionné en jeu pendant plusieurs mois, validant l'ensemble de la conception. Il a finalement rendu l'âme suite aux assauts d'un jeune chaton un peu trop curieux envers les câbles. Une excellente leçon sur l'importance d'un passage de câbles entièrement fermé pour une future V2 !",
+        "link_img": ["/img/bb1.jpg", "/img/bb2.jpg", "/img/bb3.jpg"],
+        "alt_img": "Image de la Button Box sur la face avant et arrière",
+        "repo": ""
     }
 ]
