@@ -1,0 +1,13 @@
+    {
+        "category": "Scolaire",
+        "title_menu": "Sutom",
+        "title": "Projet Scolaire - SAE Sutom",
+        "date": "Septembre 2025 - Janvier 2026",
+        "languages": ["Python"],
+        "techno": ["Lecture de fichiers", "Github"],
+        "usage": "Description de l'usage du projet Sutom",
+        "description": "Description du projet Sutom",
+        "link_img": ["img/motus.png", "img/motus2.png"],
+        "alt_img": "Image de l'émission motus",
+        "repo": ""
+    }
