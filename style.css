@@ -242,6 +242,7 @@ footer .project-info {
 .content-title {
     font-size: 2rem;
     color: var(--content-title);
+    text-align: center;
 }
 
 .content-date {
