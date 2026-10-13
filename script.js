@@ -80,6 +80,25 @@ function initCarrousel(content) {
         });
     }
 
+    const image = content.querySelector(".content-image");
+    let startX = 0;
+
+    image.addEventListener("touchstart", (e) => {
+        startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+
+    image.addEventListener("touchend", (e) => {
+        const diff = e.changedTouches[0].clientX - startX;
+        if (Math.abs(diff) < 50 || currentImages.length <= 1) return;
+
+        if (diff < 0) {
+            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        } else {
+            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        }
+        updateCarrouselDisplay(content);
+    }, { passive: true });
+
     document.addEventListener("keydown", (e) => {
         if (currentImages.length > 1) {
             if (e.key === "ArrowLeft") {
@@ -106,7 +125,7 @@ async function inject_project(content, project) {
     content.querySelector(".content-description").textContent = project.description;
     console.log(project.repo);
     if (project.repo !== "") {
-        content.querySelector(".content-repo-title").textContent = "Lien vers le dépot Github : ";
+        content.querySelector(".content-repo-title").textContent = "Dépot Github : ";
         content.querySelector(".content-repo").href = project.repo;
         content.querySelector(".content-repo").textContent = project.repo;
     }
@@ -142,19 +161,13 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
     localStorage.setItem("theme", next);
 });
 
-async function main() {
-    const projects = await charge_file();
-    const content = document.querySelector(".project-content");
-    const liste = document.querySelector(".project-menu ul");
-
-    initCarrousel(content);
-
+function buildMenu(liste, projects, content) {
     const categoryLists = {};
 
-    projects.forEach((project) => {
+    projects.forEach((project, index) => {
         if (!categoryLists[project.category]) {
             const categoryLi = document.createElement("li");
-            
+
             const categoryTitle = document.createElement("strong");
             categoryTitle.textContent = project.category;
             categoryLi.appendChild(categoryTitle);
@@ -163,21 +176,36 @@ async function main() {
             categoryLi.appendChild(subUl);
 
             liste.appendChild(categoryLi);
-
             categoryLists[project.category] = subUl;
         }
 
         const li = document.createElement("li");
         li.textContent = project.title_menu;
         li.classList.add("project-item");
+        li.dataset.index = index;
+
         li.addEventListener("click", () => {
-            document.querySelectorAll(".project-item").forEach((item) => item.classList.remove("active"));
-            li.classList.add("active");
+            // marque comme actif l'entrée cliquée dans les DEUX menus
+            document.querySelectorAll(".project-item").forEach((item) => {
+                item.classList.toggle("active", Number(item.dataset.index) === index);
+            });
 
             inject_project(content, project);
+            document.querySelector(".mobile-menu").removeAttribute("open"); // referme le dropdown
         });
 
         categoryLists[project.category].appendChild(li);
     });
+}
+
+async function main() {
+    const projects = await charge_file();
+    const content = document.querySelector(".project-content");
+
+    initCarrousel(content);
+
+    document
+        .querySelectorAll(".project-menu > ul, .header-mobile-menu > ul")
+        .forEach((liste) => buildMenu(liste, projects, content));
 }
 main();

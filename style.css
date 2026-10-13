@@ -61,9 +61,10 @@
     --carrousel-btn-bg-hover: #34a4dc;
     --carrousel-btn-shadow-hover: none;
     --dot-hover: #1c97d5;
-    .theme-img {
-        filter: invert(1);
-    }
+}
+
+:root[data-theme="dark"] .theme-img {
+    filter: invert(1);
 }
 
 /* ==========================================================
@@ -101,7 +102,8 @@ header h1 {
     padding-top: 0.5rem;
 }
 
-.header-links, .header-theme {
+.header-links,
+.header-theme {
     padding-top: 2.3rem;
 }
 
@@ -165,13 +167,17 @@ main {
 }
 
 .project-item.active {
-    color: #3a8f7d;
+    color: #44c0a5;
     font-weight: bold;
 }
 
 /* ==========================================================
    CONTACTS (bas du menu)
    ========================================================== */
+
+footer .project-info {
+    display: none;
+}
 
 .project-info {
     margin-top: auto;
@@ -217,6 +223,8 @@ main {
 
 .project-content {
     flex: 4;
+    min-width: 0;
+    overflow-wrap: anywhere;
     background-color: var(--bg-content);
     color: var(--text-content);
     padding: 0 2rem;
@@ -311,6 +319,10 @@ main {
     box-shadow: var(--carrousel-btn-shadow-hover);
 }
 
+.content-carrousel p {
+    display: none;
+}
+
 .content-image {
     width: 1080px;
     max-width: 70%;
@@ -354,22 +366,155 @@ main {
 }
 
 /* ==========================================================
-   MOBILE
+   MENU DÉROULANT (mobile uniquement)
+   Caché par défaut, affiché dans la media query mobile
    ========================================================== */
 
-@media (max-width: 600px) {
+.header-mobile-menu {
+    display: none;
+    position: relative;
+}
+
+.header-mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    padding: 0 0.8rem;
+    border-radius: 7px;
+    border: solid 1px black;
+    font-size: 20px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    box-shadow: var(--btn-shadow);
+}
+
+.header-mobile-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.header-mobile-menu > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 13rem;
+    margin: 0.3rem 0 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-menu);
+    color: var(--text-menu);
+    border: solid 1px var(--border);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header-mobile-menu ul {
+    list-style: none;
+}
+
+.header-mobile-menu ul ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.header-mobile-menu strong {
+    display: block;
+    margin: 0.5rem 0;
+    color: var(--menu-category);
+}
+
+/* ==========================================================
+   TABLETTE ET MOBILE (900px et moins)
+   ========================================================== */
+
+@media (max-width: 900px) {
+    .content-carrousel > button.prev,
+    .content-carrousel > button.next {
+        display: none !important;
+    }
+}
+
+/* ==========================================================
+   MOBILE (500px et moins)
+   ========================================================== */
+
+@media (max-width: 500px) {
+    .project-menu {
+        display: none;
+    }
+
+    .content-header,
+    header {
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .header-name {
+        text-align: center;
+        margin-bottom: -2rem;
+    }
+
+    .header-name h1 {
+        font-size: 20px;
+    }
+
+    .header-name h2 {
+        font-size: 15px;
+    }
+
+    .header-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .header-links button,
+    .header-mobile-menu summary {
+        width: auto;
+        padding: 0 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .header-links button {
+        height: 1.5rem;
+    }
+
+    .header-mobile-menu {
+        display: block;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .header-mobile-menu ul {
+        font-size: 0.8rem;
+    }
+
+    .content-title {
+        font-size: 1.5rem;
+    }
+
     .content-carrousel {
         gap: 0.5rem;
     }
 
-    .content-carrousel > button.prev,
-    .content-carrousel > button.next {
-        width: 2.4rem;
-        height: 2.4rem;
-        font-size: 0.9rem;
-    }
-
     .content-image {
         max-width: calc(100% - 6rem);
+        touch-action: pan-y;
+    }
+
+    .content-carrousel p {
+        display: block;
+        font-size: 0.8rem;
+        margin-top: -0.2rem;
+        margin-bottom: -0.5rem;
+    }
+
+    footer .project-info {
+        display: block;
     }
 }
