@@ -37,5 +37,18 @@
         "link_img": ["/img/bb1.jpg", "/img/bb2.jpg", "/img/bb3.jpg"],
         "alt_img": "Image de la Button Box sur la face avant et arrière",
         "repo": ""
+    },
+    {
+        "category": "Personnel",
+        "title_menu": "AmbiantLedStrip",
+        "title": "Projet Personnel - AmbiantLedStrip",
+        "date": "2023",
+        "languages": ["Python"],
+        "techno": ["Envoi de trames entre 2 appareils", "Wireshark"],
+        "usage": "Au moment de regarder un film, une série, je voulais avoir un éclairage d'ambiance et j'avais dans ma chambre une bande led RGB connectée au wifi.",
+        "description": "La première étape était de comprendre comment communiquer avec les leds. Contrairement aux grandes marques comme Philips ou Govee, mes leds n'avaient pas d'API utilisables directement dans un programme python. J'ai donc installé une application qui permet de les controller sur mon ordinateur. J'ai ensuite changé la couleur en analysant les requêtes entrantes et sortantes de la carte réseau avec Wireshark. J'ai donc analysé la requête qui m'interessait pour en sortir les informations dont j'avais besoin, notemment le message qu'attends les leds. Une fois ces informations récupérées, j'ai fait une fonction python chargée de recopier la requête et d'en envoyer une faite à la main. Je pouvais donc gérer l'intensité de la valeur rouge, verte et bleue des leds. Si je mettais toutes les valeurs à O, j'éteignait les leds. Si je mettais tout à 255, la couleur était blanche.",
+        "link_img": ["/img/bb1.jpg", "/img/bb2.jpg", "/img/bb3.jpg"],
+        "alt_img": "Image de la Button Box sur la face avant et arrière",
+        "repo": ""
     }
 ]
