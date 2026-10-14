@@ -50,5 +50,18 @@
         "link_img": ["/img/led1.png"],
         "alt_img": "Code servant à controller les LEDS",
         "repo": "https://github.com/geoffreyrigal/AmbiantLedStrip"
+    },
+    {
+        "category": "Scolaire",
+        "title_menu": "Sutom",
+        "title": "Projet Étudiant - Sutom",
+        "date": "Septembre 2025 - Janvier 2026",
+        "languages": ["Python"],
+        "techno": ["Aucune"],
+        "usage": "Ce projet fait partie des SAE réalisées pendant ma première année de BUT Informatique à l'IUT du Limousin. C'était un projet en binôme où le but était de coder un jeu qui ressemble au jeu télévisé 'Motus' ou au jeu 'Wordle'.",
+        "description": "Le point de départ a été de comprendre le sujet et les attendus. Nous avons jugé que le système de gestion des fichiers et du score était secondaire et qu'il était en revanche primordial d'avoir un jeu fonctionnel (le MVP : Minimum Viable Product).\nNous nous sommes donc répartis les tâches, la mienne étant majoritairement tournée vers l'algorithmie du projet, entre autres : comparer la chaîne de caractères en entrée par rapport au mot à chercher et garder les lettres qui sont bien placées, celles qui sont mal placées et celles qui ne sont pas dans le mot.\nUne fois le MVP réalisé, nous avons pu attaquer les tâches secondaires. Nous avons fait un système de score et de classement qui se sauvegarde entre les parties, dans un fichier que nous lisions et modifiions en fonction des besoins. Nous avons choisi de calculer les scores sur le nombre d'essais réalisés en définissant un nombre de points maximal en fonction de la longueur du mot et en enlevant 20 % à chaque tentative.\nUne banque de mots nous avait aussi été fournie, nous avons pu la relier au programme pour que le mot soit choisi aléatoirement.\nNous avons aussi pu nous concentrer sur l'esthétique du jeu en rendant les menus plus propres, jolis et clairs.\nLe point faible de notre code a été le manque de modularité. Nous n'avions pas assez réfléchi à la structure du projet, nous nous sommes donc retrouvés avec des fonctions très, voire trop longues et certains détails attendus que nous n'avons pas pu implémenter dû à la mauvaise structure du code.\nMon binôme étant moins familier avec ce domaine technique, j'ai pris plaisir à l'accompagner, à vulgariser certains concepts vus en cours et à lui expliquer le fonctionnement du code.",
+        "link_img": ["/img/sutom1.png","/img/sutom2.png","/img/sutom3.png","/img/sutom4.png","/img/sutom5.png","/img/sutom6.png","/img/sutom7.png"],
+        "alt_img": "Projet Sutom",
+        "repo": "https://github.com/geoffreyrigal/Sutom"
     }
 ]
