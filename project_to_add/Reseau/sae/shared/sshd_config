@@ -1,0 +1,14 @@
+# ============================================================
+# sshd_config — SSH/SFTP pour S_F
+# ============================================================
+
+Port 22
+ListenAddress 0.0.0.0
+
+PasswordAuthentication yes
+PermitRootLogin no
+
+# Activation du sous-système SFTP
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+AllowUsers transfert

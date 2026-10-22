@@ -123,11 +123,17 @@ async function inject_project(content, project) {
     content.querySelector(".content-usage").textContent = project.usage;
     content.querySelector(".content-description-title").textContent = "Description du projet";
     content.querySelector(".content-description").textContent = project.description;
-    console.log(project.repo);
-    if (project.repo !== "") {
-        content.querySelector(".content-repo-title").textContent = "Dépot Github : ";
-        content.querySelector(".content-repo").href = project.repo;
-        content.querySelector(".content-repo").textContent = project.repo;
+
+    const repoTitle = content.querySelector(".content-repo-title");
+    const repoLink = content.querySelector(".content-repo");
+    if (project.repo) {
+        repoTitle.textContent = "Dépot Github : ";
+        repoLink.href = project.repo;
+        repoLink.textContent = project.repo;
+    } else {
+        repoTitle.textContent = "";
+        repoLink.removeAttribute("href");
+        repoLink.textContent = "";
     }
     
     if (Array.isArray(project.link_img)) {
@@ -191,7 +197,7 @@ function buildMenu(liste, projects, content) {
             });
 
             inject_project(content, project);
-            document.querySelector(".mobile-menu").removeAttribute("open"); // referme le dropdown
+            document.querySelector(".header-mobile-menu").removeAttribute("open"); // referme le dropdown
         });
 
         categoryLists[project.category].appendChild(li);

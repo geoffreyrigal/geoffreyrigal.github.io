@@ -1,0 +1,166 @@
+body
+{
+    background-image:url(bg_form.jpg);
+    margin:0;
+    background-attachment:fixed;
+    background-size: cover;
+    font-family: 'Abhaya Libre', serif;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 65px;
+    text-decoration: underline 3px;
+    color: #007627;
+    margin-bottom: 5px;
+}
+
+#formulaire
+{
+    background-color: rgba(238, 238, 238, 0.911);
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 31%;
+    margin-right: 31%;
+    border-radius: 20px;
+}
+
+#name, #email
+{
+    border-radius: 15px;
+    margin-bottom: 7px;
+    width: 310px;
+    height: 40px;
+    border: none;
+}
+
+textarea
+{
+    border-radius: 15px;
+    width: 310px;
+    height: 100px;
+    border: none;
+    margin-bottom: 7px;
+    resize: none;
+}
+
+#bandeau
+{
+    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#e1
+{ 
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 75px;
+}
+
+#e2, #e3, #e4, #e5, #e3:visited, #e4:visited, #e5:visited, #e2:visited
+{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+#e2:hover, #e3:hover, #e4:hover, #e5:hover
+{
+    color: #007627;
+}
+
+#e2
+{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+#boutton
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#send
+{
+    margin-left: 28%;
+    margin-bottom: 7px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #007627;
+    font-size: 25px;
+}
+
+#reset
+{
+    margin-right: 28%;
+    margin-bottom: 7px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #007627;
+    height: 50px;
+    font-size: 25px;
+}
+
+#send:hover, #reset:hover
+{
+    background-color: whitesmoke;
+    color: black;
+}
+
+table,
+td {
+    border: 1px solid #4b4b4b;
+    background-color: #dddddd7a;
+    text-align: center;
+}
+
+#first_line
+{
+    background-color: #dddddd81;
+    color: #000000;
+    border: 1px solid #4b4b4b;
+    text-align: center;
+}
+
+table
+{
+    border-radius: 5px;
+    width: 25%;
+    bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+}
+
+#table_foot
+{
+    display: flex;
+    justify-content: left;
+}

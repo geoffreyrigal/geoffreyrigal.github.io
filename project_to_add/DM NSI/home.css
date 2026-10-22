@@ -1,0 +1,102 @@
+body
+{
+    background-image:url(bg_home.jpg);
+    margin:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Abhaya Libre', serif;
+}
+
+h1
+{
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 27%;
+    margin-right: 25%;
+    border-radius: 10px;
+    font-size: 75px;
+    color: whitesmoke;
+    background-color: rgba(223, 223, 223, 0.281);
+}
+
+#bandeau
+{
+    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#e1
+{ 
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 75px;
+}
+
+#e2, #e3, #e4, #e5, #e3:visited, #e4:visited, #e5:visited, #e2:visited
+{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+#e2:hover, #e3:hover, #e4:hover, #e5:hover
+{
+    color: #007627;
+}
+
+#e2
+{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+table,
+td {
+    border: 1px solid #4b4b4b;
+    background-color: #dddddd5b;
+    text-align: center;
+}
+
+#first_line
+{
+    background-color: #dddddd5b;
+    color: #000000;
+    border: 1px solid #4b4b4b;
+    text-align: center;
+}
+
+table
+{
+    border-radius: 5px;
+    width: 25%;
+    position: fixed;
+    bottom: 10px;
+}
+
+#table_foot
+{
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+}

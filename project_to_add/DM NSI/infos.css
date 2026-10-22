@@ -1,0 +1,309 @@
+body
+{
+    background-color: rgb(10, 77, 36);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    color: white;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#contenu_page
+{
+    margin: 10px;
+}
+
+h1
+{
+    text-align: center;
+    background-color: rgba(189, 189, 189, 0.315);
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-left: 375px;
+    margin-right: 375px;
+    border-radius: 15px;
+}
+
+h2
+{
+    font-size: 30px;
+}
+
+#sommaire
+{
+    background-color: rgba(189, 189, 189, 0.315);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+a
+{
+    color: black;
+    font-size: 20px;
+}
+
+li
+{
+    color: black;
+}
+
+#title_sommaire
+{
+    color: rgb(221, 221, 221);
+}
+
+#sommaire_box
+{
+    display: flex;
+    justify-content: center;
+}
+
+#sommaire_box img
+{
+    max-width: 100%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#sommaire_box a
+{
+    max-width: 200px;
+}
+
+#bandeau
+{
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#e1
+{ 
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 75px;
+}
+
+#e2, #e3, #e4, #e5, #e3:visited, #e4:visited, #e5:visited, #e2:visited
+{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+#e2:hover, #e3:hover, #e4:hover, #e5:hover
+{
+    color: #007627;
+}
+
+#e2
+{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+
+/**************************************/
+
+#paragraphe_1
+{
+    display: flex;
+}
+
+#img1
+{
+    max-width: 65%;    
+    border-radius: 7px;
+}
+
+#texte1
+{
+   margin-left: 20px;
+    font-size: 22px;
+}
+
+/**************************************/
+
+#paragraphe_2
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+#img2
+{
+    max-width: 65%;    
+    border-radius: 7px;
+}
+
+#texte2
+{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+#src2
+{
+    margin-right: 10px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+#oslo_link
+{
+    margin-left: 90%;
+}
+
+/**************************************/
+
+#paragraphe_3
+{
+    display: flex;
+}
+
+#img3
+{
+    max-width: 65%;    
+    border-radius: 7px;
+}
+
+#texte3
+{
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+#src3
+{
+    margin-bottom: 5px;
+}
+
+/**************************************/
+
+#paragraphe_4
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+#img4
+{
+    max-width: 65%;    
+    border-radius: 7px;
+}
+
+#texte4
+{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+#src4
+{
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+#ab_link
+{
+    margin-left: 90%;
+}
+
+/**************************************/
+
+#paragraphe_5
+{
+    display: flex;
+}
+
+#img5
+{
+    max-width: 65%;    
+    border-radius: 7px;
+}
+
+#texte5
+{
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+/**************************************/
+
+#paragraphe_6
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+#img6_a, #img6_b, #img6_c
+{
+    max-width: 20%;    
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+#texte6
+{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+#photo2
+{
+    margin-left: 65%;
+}
+
+/************************************/
+
+#foot
+{
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.795);
+    margin-top: 30px;
+}
+
+button
+{
+    width: 95%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgba(211, 211, 211, 0.795);
+    font-size: 18px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+button:hover
+{
+    box-shadow: 1px 1px 10px #202020;
+    background-color: rgba(172, 172, 172, 0.795);
+}
